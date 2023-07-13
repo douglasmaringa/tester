@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+
 function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,9 +25,8 @@ function Register() {
     setErrorMessage('');
 
     try {
-      const response = await axios.post('http://172.93.101.129:8080/api/user/register', 
-      userData);
-
+        const response = await axios.post('https://monitor.xyz.wf/api/user/register', userData);
+      
       console.log(response)
 
       if (response.status === 201) {

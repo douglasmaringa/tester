@@ -18,7 +18,7 @@ function Home() {
       const fetchMonitors = async () => {
         try {
             const response = await axios.post(
-                'http://172.93.101.129:8080/api/monitor/monitors/all',
+                'https://monitor.xyz.wf/api/monitor/monitors/all',
                 { token }
               );
               //console.log(response)
@@ -63,7 +63,7 @@ function Home() {
     };
 
     try {
-      const response = await axios.post('http://172.93.101.129:8080/api/monitor/monitors/', monitorData);
+      const response = await axios.post('https://monitor.xyz.wf/api/monitor/monitors/', monitorData);
 
       if (response.status === 201) {
         setIsModalOpen(false);
@@ -74,7 +74,7 @@ function Home() {
        
             try {
                 const response = await axios.post(
-                    'http://172.93.101.129:8080/api/monitor/monitors/all',
+                    'https://monitor.xyz.wf/api/monitor/monitors/all',
                     { token }
                   );
                   //console.log(response)
@@ -100,7 +100,7 @@ function Home() {
   
   const handlePauseMonitor = async (monitorId) => {
     try {
-      await axios.put(`http://172.93.101.129:8080/api/monitor/monitors/${monitorId}/pause`);
+      await axios.put(`https://monitor.xyz.wf/api/monitor/monitors/${monitorId}/pause`);
       alert('Monitor paused successfully.');
     } catch (error) {
       console.error('Failed to pause monitor:', error);

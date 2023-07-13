@@ -21,7 +21,7 @@ function Details() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://172.93.101.129:8080/api/monitor/monitors/uptimeevents', {
+      const response = await axios.post('https://monitor.xyz.wf/api/monitor/monitors/uptimeevents', {
         id: monitorId,
         token,
       });
